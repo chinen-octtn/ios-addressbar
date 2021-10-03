@@ -1,4 +1,6 @@
-#  iOS 15 Safariでアドレスバーの表示を確認するデモ（調整中）
+#  iOS 15 Safariでアドレスバーの表示を確認するデモ
+
+[Sampleページ](https://chinen-octtn.github.io/ios-addressbar/)
 
 ## デフォルトではウインドウ下部のメニューバーとアドレスバーが一体型になっている
 
