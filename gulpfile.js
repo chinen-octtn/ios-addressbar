@@ -26,11 +26,6 @@ const imageminPngquant = require('imagemin-pngquant');
 const browserSync = require('browser-sync');
 const browserSyncSsi = require('browsersync-ssi');
 
-// webpack
-const webpackStream = require('webpack-stream');
-const webpack = require('webpack');
-const webpackConfig = require('./webpack.config');　// webpackの設定ファイルの読み込み
-
 // Utility
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -47,7 +42,6 @@ const src = {
   htmlWatch: ['src/**/*.pug', 'src/_data/**/*.json'],
   css: ['./src/scss/**/*.scss', '!./src/scss/**/_*.scss'],
   cssWatch: 'src/**/*.scss',
-  jsWatch: 'src/**/*.js',
   image: 'src/img/**/*.{png,jpg,gif,svg,ico}',
   imageWatch: 'src/img/**/*',
 };
@@ -60,7 +54,6 @@ const dest = {
   root: 'docs/',
   image: 'docs/assets/img/',
   css: 'docs/assets/css/',
-  js: 'docs/assets/js/',
 };
 
 
@@ -146,19 +139,6 @@ function sass() {
   );
 }
 exports.sass = sass;
-
-/**
-* JS
-* ES6をWebpackでbundle + ES5に変換
-*/
-function js() {
-  return (
-    webpackStream(webpackConfig, webpack)
-    .pipe(gulp.dest(dest.js))
-    .pipe(browserSync.reload({ stream: true }))
-  );
-}
-exports.js = js;
 
 
 /**
@@ -260,7 +240,6 @@ exports.serve = serve;
 function watch() {
   gulp.watch(src.htmlWatch, pug);
   gulp.watch(src.cssWatch, sass);
-  gulp.watch(src.jsWatch, js);
   gulp.watch(src.imageWatch, image);
 }
 exports.watch = watch;
@@ -268,6 +247,6 @@ exports.watch = watch;
 
 // デフォルトタスク
 exports.default = gulp.series(
-  gulp.parallel(pug, sass, js, image),
+  gulp.parallel(pug, sass, image),
   gulp.parallel(serve, watch),
 );
