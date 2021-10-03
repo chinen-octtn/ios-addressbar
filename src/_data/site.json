@@ -1,19 +1,27 @@
 {
-  "url": "https://example.com",
-  "name": "サイト名",
+  "url": "https://github.com/chinen-octtn",
+  "name": "chinen-octtnのGitHub",
   "viewport": "width=device-width",
   "description": "サイトの概要",
   "keywords": "",
   "lang": "ja",
   "locale": "ja_JP",
-  "siteImage": "/ogp.png",
+  "siteImage": "https://chinen-octtn.github.io/ios-addressbar/assets/img/ogp.png",
   "fbAppId": "",
   "fbAdmins": "",
   "twitterCard": "summary_large_image",
   "twitterSite": "",
-  "/": {
-    "name": "トップページ",
-    "description": "トップページの概要",
+  "/ios-addressbar/": {
+    "name": "iOSアドレスバー表示テスト",
+    "description": "iOS 15デフォルトのアドレスバーは、ウインドウ下部のメニューバーと一体型になった。表示、挙動を確認するためのサンプルページを作成する",
+    "keywords": "",
+    "ogp": "",
+    "canonical": "",
+    "alternate": ""
+  },
+  "/ios-addressbar/statusbar.html": {
+    "name": "iOSアドレスバー表示テスト",
+    "description": "iOS 15デフォルトのアドレスバーは、ウインドウ下部のメニューバーと一体型になった。表示、挙動を確認するためのサンプルページを作成する",
     "keywords": "",
     "ogp": "",
     "canonical": "",
