@@ -1,0 +1,8 @@
+@use './foundation/_define' as *;
+
+.c-content {
+  padding: 1em;
+  min-height: 1000px;
+  color: #fff;
+  background: linear-gradient(#111 0%, #111 30%, transparent 100%);
+}

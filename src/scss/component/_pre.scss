@@ -1,0 +1,12 @@
+.c-pre {
+  background: #ccc;
+  color: #111;
+  padding: 1em;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 1.1em;
+
+  * + & {
+    margin-top: 1em;
+  }
+}

@@ -1,6 +1,9 @@
 @use './foundation/_define' as *;
 @use './foundation/_reset' as *;
-
-h1 {
-  color: $color-main;
-}
+@use './layout/_header';
+@use './layout/_footer';
+@use './component/_title';
+@use './component/_content';
+@use './component/_text';
+@use './component/_list';
+@use './component/_pre';

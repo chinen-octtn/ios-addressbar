@@ -1,0 +1,24 @@
+extends /_include/_layout
+append variables
+  - var directory ='/'
+block css
+block js
+
+block body
+  main
+    h1.c-title ステータスバー
+    div.c-content
+      p.c-text 電池残量や電波状況や時計などが表示されるステータスバーは、iOS 15では下記コードで色を指定できるようになった。
+
+      pre.c-pre
+        code.
+          &lt;!-- headタグ内にmetaタグで記述する --&gt;
+          &lt;meta name="theme-color" content="#f00"&gt;
+
+      p.c-text iOS 14以前では、PWAをホームに追加した場合にしか色を指定できず、かつ通常・黒・透明の3択だった。
+
+      pre.c-pre
+        code.
+          &lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt;
+
+      p.c-text デフォルト（アドレスバーが下）ではステータスバーの色指定が適用されるが、設定を変えてアドレスバーを上部にしている場合は、スクロール時のみ色が変わる。

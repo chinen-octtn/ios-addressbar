@@ -1,0 +1,10 @@
+@use './foundation/_define' as *;
+
+.c-text {
+  line-height: 1.7;
+  text-shadow: 0 0 2px #333;
+
+  * + & {
+    margin-top: 1em;
+  }
+}
